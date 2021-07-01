@@ -102,6 +102,9 @@ func (t *telegramWrap) Run(f func()) {
 	err := t.client.Run(t.ctx, func(ctx context.Context) error {
 		auth_ := t.client.Auth()
 		authStatus, err := auth_.Status(ctx)
+		if err == nil {
+			t.myID = authStatus.User.GetID()
+		}
 
 		if err != nil || !authStatus.Authorized {
 			var phonenumber string
