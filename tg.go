@@ -10,6 +10,7 @@ import (
 	"github.com/gotd/td/telegram/auth"
 	"github.com/gotd/td/telegram/downloader"
 	"golang.org/x/xerrors"
+	"net/http"
 
 	"github.com/gotd/td/telegram/message"
 	"github.com/gotd/td/tg"
@@ -87,6 +88,17 @@ func (t *telegramWrap) newClient() error {
 }
 
 func (t *telegramWrap) Run(f func()) {
+	// ****************** нужно для хероку ******************
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "80"
+	}
+	go http.ListenAndServe(":"+port, nil)
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprint(w, "working")
+	})
+	// ******************
+
 	err := t.client.Run(t.ctx, func(ctx context.Context) error {
 		auth_ := t.client.Auth()
 		authStatus, err := auth_.Status(ctx)
