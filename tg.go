@@ -230,24 +230,6 @@ func (t *telegramWrap) SpeechToTxt(filepath string) string {
 }
 
 func (t *telegramWrap) sendMsg(ID int, txt string, pMsgID int) {
-	//var peer tg.InputPeerClass
-	//if user, ok := t.usersbyID[ID]; ok {
-	//	peer = &tg.InputPeerUser{
-	//		UserID:     ID,
-	//		AccessHash: user.AccessHash,
-	//	}
-	//} else if chat, ok := chats[ID]; ok {
-	//	peer = &tg.InputPeerChannel{
-	//		ChannelID:  ID,
-	//		AccessHash: chat.AccessHash,
-	//	}
-	//} else {
-	//	w.logger.Sugar().Errorf("По ID %d не нашелся пользователь/чат\n", ID)
-	//	return
-	//}
-
-	//_, err := message.NewSender(tg.NewClient(w.client)).To(peer).StyledText(ctx, thtml.String(nil, txt))
-
 	peer := &tg.InputPeerUser{
 		UserID: ID,
 		//AccessHash: user.AccessHash,
