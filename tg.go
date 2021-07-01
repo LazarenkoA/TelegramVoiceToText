@@ -88,7 +88,7 @@ func (t *telegramWrap) newClient() error {
 }
 
 func (t *telegramWrap) Run(f func()) {
-	// ****************** нужно для хероку ******************
+	// ****************** нужно для  хероку******************
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = "80"
