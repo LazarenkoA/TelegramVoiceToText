@@ -1,5 +1,7 @@
 github.com/LazarenkoA/SpeechToTxt v0.0.0-20210630165231-dd6ef2d01aab h1:AOVJbRB7AXw8tOqL57gmdh4GBfXRv5s5AJiKRq3DrXA=
 github.com/LazarenkoA/SpeechToTxt v0.0.0-20210630165231-dd6ef2d01aab/go.mod h1:CaHjIty9Uilm8u86esTw+7qrtypYkZ6Lpf7ryQFrXfU=
+github.com/LazarenkoA/SpeechToTxt v0.0.0-20210701164940-6a315625f4bf h1:eSexv0mzy9G5CCubCc9K0CJirJyJSCr+alIAbhBu3co=
+github.com/LazarenkoA/SpeechToTxt v0.0.0-20210701164940-6a315625f4bf/go.mod h1:CaHjIty9Uilm8u86esTw+7qrtypYkZ6Lpf7ryQFrXfU=
 github.com/PuerkitoBio/goquery v1.6.1/go.mod h1:GsLWisAFVj4WgDibEWF4pvYnkVQBpKBKeU+7zCJoLcc=
 github.com/andres-erbsen/clock v0.0.0-20160526145045-9e14626cd129/go.mod h1:rFgpPQZYZ8vdbc+48xibu8ALc3yeyd64IhHS+PU6Yyg=
 github.com/andybalholm/cascadia v1.1.0/go.mod h1:GsXiBklL0woXo1j/WYWtSYYC4ouU9PqHO0sqidkEA4Y=

@@ -11,6 +11,7 @@ import (
 	"github.com/gotd/td/telegram/downloader"
 	"golang.org/x/xerrors"
 	"net/http"
+	"time"
 
 	"github.com/gotd/td/telegram/message"
 	"github.com/gotd/td/tg"
@@ -228,6 +229,7 @@ func (t *telegramWrap) SpeechToTxt(filepath string) string {
 		ID_apikey: ID_apikey,
 		Apikey:    apikey,
 		Bucket:    bucket,
+		TimeOut:   time.Minute * 5,
 	})
 
 	out := make(chan string, 1)
